@@ -172,8 +172,6 @@ class SAC extends PluginBase
             $reason = implode(" ", $args);
             $file = file_get_contents($this->dataPath() . "Players/" . strtolower($player_name) . ".txt");
             if($file >= "3") {
-              $string = "action_after_three_warns: ";
-              $action = substr(strstr(file_get_contents($this->dataPath() . "config.yml"), $string), strlen($string));
                 if($player->isOP()){
                   return;
                 }
