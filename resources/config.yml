@@ -55,11 +55,11 @@
 
 #Wich Message Sould be shown if Fly is detected?
 
-   Fly-Message: "[SAC] > Fly is not allowed!"
+   Fly-Message: "[GMCPE WatchDog] > Fly is not allowed!"
 
 #Which Log Message Sould be shown if Fly is detected?
 
-   Fly-LogMessage: "[SAC] > %PLAYER% is hacking Fly!"
+   Fly-LogMessage: "[GMCPE WatchDog] > %PLAYER% is hacking Fly!"
 
 #----------------KillAura-----------------#
 #BETA, REPORT BUGS!
@@ -79,11 +79,11 @@
 
 #Wich Message Sould be shown if KillAura is detected?
 
-   KillAura-Message: "[SAC] > KillAura is not allowed!"
+   KillAura-Message: "[GMCPE WatchDog] > KillAura is not allowed!"
 
 #Which Log Message Sould be shown if KillAura is detected?
 
-   KillAura-LogMessage: "[SAC] > %PLAYER% is hacking KillAura!"
+   KillAura-LogMessage: "[GMCPE WatchDog] > %PLAYER% is hacking KillAura!"
 
 #------------------Regen------------------#
 #Do you want to enable Regen check?
@@ -97,11 +97,11 @@
 
 #Wich Message Sould be shown if Regen is detected?
 
-   Regen-Message: "[SAC] > Regen is not allowed!"
+   Regen-Message: "[GMCPE WatchDog] > Regen is not allowed!"
 
 #Which Log Message Sould be shown if Regen is detected?
 
-   Regen-LogMessage: "[SAC] > %PLAYER% is hacking Regen!"
+   Regen-LogMessage: "[GMCPE WatchDog] > %PLAYER% is hacking Regen!"
 
 #-----------------Speed-------------------#
 #Do you want to enable Speed check?
@@ -112,7 +112,7 @@
 
 #Wich Punishment should take place?
 
-   Speed-Punishment: kick
+   Speed-Punishment: block
 
 #How many times must a player be hacking before detection?
 #5 Should work fine. (Standard)
@@ -122,11 +122,11 @@
 
 #Wich Message Sould be shown if Speed is detected?
 
-   Speed-Message: "[SAC] > Speed is not allowed!"
+   Speed-Message: "[GMCPE WatchDog] > Speed is not allowed!"
 
 #Which Log Message Sould be shown if Speed is detected?
 
-   Speed-LogMessage: "[SAC] > %PLAYER% is hacking Speed!"
+   Speed-LogMessage: "[GMCPE WatchDog] > %PLAYER% is hacking Speed!"
 
 #-----------------Reach-------------------#
 #Do you want to enable Reach check?
@@ -150,15 +150,15 @@
 
 #Wich Punishment should take place if Glide is detected?
 
-   Glide-Punishment: kick
+   Glide-Punishment: block
 
 #Wich Message Sould be shown if Glide is detected?
 
-   Glide-Message: "[SAC] > Glide is not allowed!"
+   Glide-Message: "[GMCPE WatchDog] > Glide is not allowed!"
 
 #Which Log Message Sould be shown if Glide is detected?
 
-   Glide-LogMessage: "[SAC] > %PLAYER% is hacking Glide!"
+   Glide-LogMessage: "[GMCPE WatchDog] > %PLAYER% is hacking Glide!"
 
 #--------------InstantKill----------------#
 #Do you want to enable InstantKill check?
@@ -168,11 +168,11 @@
 
 #Wich Message Sould be shown if InstantKill is detected?
 
-   InstantKill-Message: "[SAC] > InstantKill is not allowed!"
+   InstantKill-Message: "[GMCPE WatchDog] > InstantKill is not allowed!"
 
 #Which Log Message Sould be shown if InstantKill is detected?
 
-   InstantKill-LogMessage: "[SAC] > %PLAYER% is hacking InstantKill!"
+   InstantKill-LogMessage: "[GMCPE WatchDog] > %PLAYER% is hacking InstantKill!"
 
 #----------------ForceOP------------------#
 #######################################################
@@ -181,7 +181,7 @@
 #Do you want to enable advanced ForceOP check?
 #READ AntiForceOP.txt BEFORE ENABLING!
 
-   ForceOP: false
+   ForceOP: true
 
 #Which Permission should ForceOP check?
 #THIS NEEDS TO BE AN EXISTING PERMISSION
@@ -212,11 +212,11 @@
 
 #Which Message Should be shown if NoClip is detected?
 
-   NoClip-Message: "[SAC] > NoClip is not allowed!"
+   NoClip-Message: "[GMCPE WatchDog] > NoClip is not allowed!"
 
 #Which Log Message Sould be shown if NoClip is detected?
 
-   NoClip-LogMessage: "[SAC] > %PLAYER% is hacking NoClip!"
+   NoClip-LogMessage: "[GMCPE WatchDog] > %PLAYER% is hacking NoClip!"
 
 #--------------ForceGameMode--------------#
 #######################################################
@@ -229,15 +229,15 @@
 #I WONT GUARANTEE FOR ANY FALSE POSITIVES WITH THAT!
 #READ AntiForceGM.txt BEFORE ENABLING!
 
-   FoceGameMode: false
+   ForceGameMode: true
 
 #Which Message Should be shown if ForceGameMode is detected?
 
-   ForceGameMode-Message: "[SAC] > ForceGameMode is not allowed!"
+   ForceGameMode-Message: "[GMCPE WatchDog] > ForceGameMode is not allowed!"
 
 #Which Log Message Sould be shown if ForceGameMode is detected?
 
-   ForceGameMode-LogMessage: "[SAC] > %PLAYER% is hacking ForceGameMode!"
+   ForceGameMode-LogMessage: "[GMCPE WatchDog] > %PLAYER% is hacking ForceGameMode!"
 
 #//////////////////////////////////////////////////////
 #//                                                  //
