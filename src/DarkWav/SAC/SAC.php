@@ -26,16 +26,14 @@ class SAC extends PluginBase
     $this->getServer()->getScheduler()->scheduleRepeatingTask(new SACTick($this), 1);
     @mkdir($this->getDataFolder());
     $this->saveDefaultConfig();
-    $this->saveResource("AntiForceOP.txt");
-    $this->saveResource("AntiForceGM.txt");
   
     $Config = $this->getConfig();
     $Logger = $this->getServer()->getLogger();
     $Server = $this->getServer();
     
     $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
-    $Logger->info(TextFormat::BLUE . "[SAC] > ShadowAntiCheat Activated"            );
-    $Logger->info(TextFormat::BLUE . "[SAC] > ShadowAntiCheat v3.1.0 [Shadow]");
+    $Logger->info(TextFormat::BLUE . "[GMCPE WatchDog] > ShadowAntiCheat Activated"            );
+    $Logger->info(TextFormat::BLUE . "[GMCPE WatchDog] > ShadowAntiCheat v3.1.0 [Shadow]");
   
     if($Config->get("ForceOP"    )) $Logger->info(TextFormat::BLUE."[SAC] > Enabling AntiForceOP"    );
     if($Config->get("NoClip"     )) $Logger->info(TextFormat::BLUE."[SAC] > Enabling AntiNoClip"     );
@@ -49,13 +47,13 @@ class SAC extends PluginBase
 
     if($Config->get("Plugin-Version") !== "3.1.0")
     {
-      $Logger->emergency(TextFormat::BLUE."[SAC] > Your Config is incompatible with this plugin version, please update immediately!");
+      $Logger->emergency(TextFormat::BLUE."[GMCPE WatchDog] > Your Config is incompatible with this plugin version, please update immediately!");
       $Server->shutdown();
     }
 
     if($Config->get("Config-Version") !== "3.5.0")
     {
-      $Logger->warning(TextFormat::BLUE."[SAC] > Your Config is out of date!");
+      $Logger->warning(TextFormat::BLUE."[GMCPE WatchDog] > Your Config is out of date!");
     }
     
     foreach($Server->getOnlinePlayers() as $player)
@@ -94,8 +92,8 @@ class SAC extends PluginBase
     $Logger = $this->getServer()->getLogger();
     $Server = $this->getServer();
 
-    $Logger->info(TextFormat::BLUE."[SAC] > You are no longer protected from cheats!");
-    $Logger->info(TextFormat::BLUE."[SAC] > ShadowAntiCheat Deactivated");
+    $Logger->info(TextFormat::BLUE."[GMCPE WatchDog] > You are no longer protected from cheats!");
+    $Logger->info(TextFormat::BLUE."[GMCPE WatchDog] > ShadowAntiCheat Deactivated");
     $Server->enablePlugin($this);
   }
     
@@ -111,16 +109,12 @@ class SAC extends PluginBase
           if ($sender instanceof Player)
           {
             $sname = $sender->getName();
-	    $message  = "[SAC] > $sname used ForceOP!";
+	    $message  = "[GMCPE WatchDog] > $sname used ForceOP!";
             $this->NotifyAdmins($message);
-            $sender->getPlayer()->kick(TextFormat::BLUE."[SAC] > ForceOP detected!");
+            $sender->getPlayer()->kick(TextFormat::BLUE."[GMCPE WatchDog] > ForceOP detected!");
           }
         }
       }
-    }
-    if ($cmd->getName() === "sac" or $cmd->getName() === "shadowanticheat")
-    {
-      $sender->sendMessage(TextFormat::BLUE."[SAC] > ShadowAntiCheat v3.1.0 [Shadow] (~DarkWav)");
     }
   }
   
@@ -131,7 +125,7 @@ class SAC extends PluginBase
       foreach ($this->PlayerObservers as $observer)
       {
         $player = $observer->Player;
-        if ($player != null and $player->hasPermission("sac.admin"))
+        if ($player != null and $player->hasPermission("gmcpe.staff"))
         {
           $player->sendMessage(TextFormat::BLUE . $message);
         }
