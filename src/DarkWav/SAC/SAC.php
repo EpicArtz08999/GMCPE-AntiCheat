@@ -25,6 +25,7 @@ class SAC extends PluginBase
   {
     $this->getServer()->getScheduler()->scheduleRepeatingTask(new SACTick($this), 1);
     @mkdir($this->getDataFolder());
+    @mkdir("Players/", 0777, true);
     $this->saveDefaultConfig();
   
     $Config = $this->getConfig();
