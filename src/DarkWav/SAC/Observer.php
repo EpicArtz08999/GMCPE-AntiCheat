@@ -145,7 +145,7 @@ class Observer
       foreach ($this->Main->PlayerObservers as $observer)
       {
         $player = $observer->Player;
-        if ($player != null and $this->Player->hasPermission("sac.admin"))
+        if ($player != null and $this->Player->hasPermission("gmcpe.staff"))
         {
           $player->sendMessage(TextFormat::BLUE . $newmsg);
         }
@@ -183,7 +183,7 @@ class Observer
     $this->JoinCounter++;
     if ($this->GetConfigEntry("I-AM-WATCHING-YOU"))
     {
-      $this->Player->sendMessage(TextFormat::BLUE."[SAC] > $this->PlayerName, I am watching you ...");
+      $this->Player->sendMessage(TextFormat::BLUE."[GMCPE WatchDog] > $this->PlayerName, I am watching you ...");
     }
   }
   
@@ -192,8 +192,8 @@ class Observer
     $this->JoinCounter++;
     if ($this->GetConfigEntry("I-AM-WATCHING-YOU"))
     {
-      $this->Player->sendMessage(TextFormat::BLUE."[SAC] > $this->PlayerName, I am still watching you ...");
-      $this->Logger->debug      (TextFormat::BLUE."[SAC] > $this->PlayerName joined this server $this->JoinCounter times since server start");
+      $this->Player->sendMessage(TextFormat::BLUE."[GMCPE WatchDog] > $this->PlayerName, I am still watching you ...");
+      $this->Logger->debug      (TextFormat::BLUE."[GMCPE WatchDog] > $this->PlayerName joined this server $this->JoinCounter times since server start");
     }
   }
 
